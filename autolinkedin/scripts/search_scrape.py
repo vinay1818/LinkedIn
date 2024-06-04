@@ -7,7 +7,7 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 import pandas as pd 
-# Now, you can continue with your code to log in and get the number of unread messages
+from datetime import datetime
 import os
 from dotenv import load_dotenv
 load_dotenv()
@@ -25,7 +25,6 @@ class Linkedin():
         driver.find_element("xpath","//*[@type='submit']").click()
 
 
-      
         #*********** Search Result ***************#
         page_num = 2
         search_key = "data analyst" # Enter your Search key here to find people
@@ -85,7 +84,11 @@ class Linkedin():
             print("!!!!!! Data scrapped !!!!!!")
         
         df = pd.DataFrame(data)
-        df.to_excel("Profiles_1.xlsx")      
+       
+        timestamp = datetime.now().strftime("%Y-%m-%d-%H-%M")
+
+        file_name = f'Profiles-{timestamp}'
+        df.to_excel(f"{file_name}.xlsx")      
         driver.quit()
     
 

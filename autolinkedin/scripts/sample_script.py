@@ -26,14 +26,18 @@ with LinkedIn(
     # print(max_invitations)
 
     # ln.withdraw_sent_invitations(max_remove=10, older_than_days=0)
-
-    ln.send_invitations(
-        max_invitations=3,
-        min_mutual=0,
-        max_mutual=1000,
-        preferred_users=["data analyst"], 
-        not_preferred_users=["Sportsman", "Doctor"],
-        view_profile=True,
-    )
+    
+    print("\n")
+    print("Please Wait !!, Searching for Poteninal Connections")
+    print("\n")
+    
+    # ln.send_invitations(
+    #     max_invitations=3,
+    #     min_mutual=0,
+    #     max_mutual=1000,
+    #     preferred_users=["analyst", "developer","software","student", "university","python"], 
+    #     not_preferred_users=["Sportsman", "Doctor"],
+    #     view_profile=True,
+    # )
 
     # ln.accept_invitations()

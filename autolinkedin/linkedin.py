@@ -199,7 +199,7 @@ class LinkedIn(AbstractBaseLinkedin):
 
             networking_home_tab.refresh()
             networking_home_tab, user_cards = self.get_connection_recommendations(networking_home_tab)
-
+           
             self.logger.info(f"Found a total of {len(user_cards)} connection recommendations.")
 
             all_cards = [
