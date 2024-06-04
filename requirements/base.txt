@@ -1,0 +1,8 @@
+selenium==4.12.0
+seleniumtabs
+
+django-environ
+python-dotenv
+
+python-crontab
+PyYAML
